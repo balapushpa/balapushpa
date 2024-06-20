@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+public class SeniorCitizenCheck {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        String input = scanner.nextLine();
+        String[] parts = input.split(" ");
+        char gender = parts[0].toUpperCase().charAt(0);
+        int age = Integer.parseInt(parts[1]);
+        boolean isSeniorCitizen = false;
+        
+        if (gender == 'M' && age >= 60) {
+            isSeniorCitizen = true;
+        } else if ((gender == 'F' || gender == 'f') && age >= 58) {
+            isSeniorCitizen = true;
+        }
+        if (isSeniorCitizen) {
+            System.out.println("Senior Citizen");
+        } else {
+            System.out.println("Not A Senior Citizen");
+        }
+        
+        scanner.close();
+    }
+}
