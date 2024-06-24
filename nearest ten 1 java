@@ -1,0 +1,20 @@
+import java.util.Scanner;
+
+public class NearestMultipleOfTen {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int n = scanner.nextInt();
+        int nearestMultiple = getNearestMultipleOfTen(n);
+        System.out.println(nearestMultiple);
+        scanner.close();
+    }
+
+    public static int getNearestMultipleOfTen(int n) {
+        int remainder = n % 10;
+        if (remainder < 5) {
+            return n - remainder;
+        } else {
+            return n + (10 - remainder);
+        }
+    }
+}
