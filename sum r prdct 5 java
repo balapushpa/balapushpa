@@ -1,0 +1,22 @@
+import java.io.*;
+import java.util.*;
+
+public class Solution {
+
+    public static void main(String[] args) {
+        Scanner s=new Scanner(System.in);
+        int a=s.nextInt();
+        int b=s.nextInt();
+        int t=a*b;
+        int sum=0;
+        if(t>1000)
+        {
+            sum=a+b;
+            System.out.println(sum);
+        }
+        else
+        {
+            System.out.println(t);
+        }
+    }
+}
